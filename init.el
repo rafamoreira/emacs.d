@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (counsel-projectile counsel ivy projectile molokai-theme color-theme-modern auto-complete ace-window org-bullets which-key try use-package))))
+    (alchemist counsel-projectile counsel ivy projectile molokai-theme color-theme-modern auto-complete ace-window org-bullets which-key try use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -105,6 +105,13 @@
 (use-package counsel-projectile
   :ensure t
   :config (counsel-projectile-mode))
+
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;;; elixir
+
+(use-package alchemist
+  :ensure t)
 
 ;(use-package highlight-indentation
 ;  :ensure t
